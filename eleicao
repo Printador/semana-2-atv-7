@@ -5,15 +5,17 @@ candidato_2 = 0
 candidato_3 = 0
 branco = 0
 
-while True:
-    
-    print(f'candidato_x:{candidato_1} \n candidato_y:{candidato_2} \n candidato_z:{candidato_3} \n branco:{branco}')
+inicio = str
+while inicio != 'S':
 
-    voto = int(input('\nQual seu voto?\n'
-    '\n889 - candidato_1\n'
-    '\n847 - candidato_2\n'
-    '\n515 - candidato_3\n'
-    '\nResposta:'))
+
+    print(f' candidato_x:{candidato_1} \n candidato_y:{candidato_2} \n candidato_z:{candidato_3} \n branco:{branco}')
+
+    try:
+        voto = int(input('\n Qual seu voto? \n 889 - candidato_1 \n 847 - candidato_2 \n 515 - candidato_3 \n 0 - branco \n Resposta:'))
+    except:
+        print('Entrada inválida, qual seu voto?: \n 889 - candidato_1 \n 847 - candidato_2 \n 515 - candidato_3 \n 0 - branco \n Resposta:')
+        voto = int(input())
 
     if voto == 889:
         candidato_1 += 1
@@ -23,5 +25,9 @@ while True:
         candidato_3 += 1
     elif voto != ('889' or '847' or '515'):
         branco += 1
+    
+    print(f' candidato_x:{candidato_1} \n candidato_y:{candidato_2} \n candidato_z:{candidato_3} \n branco:{branco}')
 
-    os.system('cls')
+    inicio = str (input('Deseja encerrar a votação? (S/N)'))
+
+os.system('cls')
