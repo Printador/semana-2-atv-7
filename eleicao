@@ -1,29 +1,27 @@
-print('Candidatos\n')
+import os
 
-print('1 - teste1')
-print('2 - teste2')
-print('3 - teste3')
-print('0 - Branco')
+candidato_1 = 0
+candidato_2 = 0
+candidato_3 = 0
+branco = 0
 
-cand1 = 'teste1'
-cand2 = 'teste2'
-cand3 = 'teste3'
+while True:
+    
+    print(f'candidato_x:{candidato_1} \n candidato_y:{candidato_2} \n candidato_z:{candidato_3} \n branco:{branco}')
 
-voto = int(input('\nQual seu voto?: '))
-if voto == (1):
-  print('Você votou em teste1')
-  print('O ganhador é',cand1, 'com 1 voto')
-elif voto == (2):
-  print('Você votou em teste2')
-  print('O ganhador é',cand2, 'com 1 voto')
-elif voto == (3):
-  print('Você votou em teste3')
-  print('O ganhador é',cand3, 'com 1 voto')
-elif voto == (0):
-  print('Seu voto foi em Branco')
-  resultado = ['teste1' or 'teste2' or 'teste3']
-  print('O ganhador foi',resultado.sort)
-elif voto != (0, 1, 2, 3):
-  print('Seu voto foi Nulo')
-  resultado = ('teste1' or 'teste2' or 'teste3')
-  print('O ganhador foi',resultado)
+    voto = int(input('\nQual seu voto?\n'
+    '\n889 - candidato_1\n'
+    '\n847 - candidato_2\n'
+    '\n515 - candidato_3\n'
+    '\nResposta:'))
+
+    if voto == 889:
+        candidato_1 += 1
+    elif voto == 847:
+        candidato_2 += 1
+    elif voto == 515:
+        candidato_3 += 1
+    elif voto != ('889' or '847' or '515'):
+        branco += 1
+
+    os.system('cls')
