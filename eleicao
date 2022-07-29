@@ -1,1 +1,29 @@
-#
+print('Candidatos\n')
+
+print('1 - teste1')
+print('2 - teste2')
+print('3 - teste3')
+print('0 - Branco')
+
+cand1 = 'teste1'
+cand2 = 'teste2'
+cand3 = 'teste3'
+
+voto = int(input('\nQual seu voto?: '))
+if voto == (1):
+  print('Você votou em teste1')
+  print('O ganhador é',cand1, 'com 1 voto')
+elif voto == (2):
+  print('Você votou em teste2')
+  print('O ganhador é',cand2, 'com 1 voto')
+elif voto == (3):
+  print('Você votou em teste3')
+  print('O ganhador é',cand3, 'com 1 voto')
+elif voto == (0):
+  print('Seu voto foi em Branco')
+  resultado = ['teste1' or 'teste2' or 'teste3']
+  print('O ganhador foi',resultado.sort)
+elif voto != (0, 1, 2, 3):
+  print('Seu voto foi Nulo')
+  resultado = ('teste1' or 'teste2' or 'teste3')
+  print('O ganhador foi',resultado)
