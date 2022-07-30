@@ -1,33 +1,38 @@
-import os
-
-candidato_1 = 0
-candidato_2 = 0
-candidato_3 = 0
+candidato_x = 0
+candidato_y = 0
+candidato_z = 0
 branco = 0
+
+#ACIMA TEMOS A AREA DAS CONSTANTES
 
 inicio = str
 while inicio != 'S':
 
 
-    print(f' candidato_x:{candidato_1} \n candidato_y:{candidato_2} \n candidato_z:{candidato_3} \n branco:{branco}')
+    print(f' candidato_x:{candidato_x} \n candidato_y:{candidato_y} \n candidato_z:{candidato_z} \n branco:{branco}')
 
     try:
-        voto = int(input('\n Qual seu voto? \n 889 - candidato_1 \n 847 - candidato_2 \n 515 - candidato_3 \n 0 - branco \n Resposta:'))
+        voto = int(input('\n Qual seu voto? \n 889 - candidato_x \n 847 - candidato_y \n 515 - candidato_z \n 0 - branco \n Resposta:'))
     except:
-        print('Entrada inválida, qual seu voto?: \n 889 - candidato_1 \n 847 - candidato_2 \n 515 - candidato_3 \n 0 - branco \n Resposta:')
+        print('Entrada inválida, qual seu voto?: \n 889 - candidato_x \n 847 - candidato_y \n 515 - candidato_z \n 0 - branco \n Resposta:')
         voto = int(input())
 
     if voto == 889:
-        candidato_1 += 1
+        candidato_x += 1
     elif voto == 847:
-        candidato_2 += 1
+        candidato_y += 1
     elif voto == 515:
-        candidato_3 += 1
+        candidato_z += 1
     elif voto != ('889' or '847' or '515'):
         branco += 1
     
-    print(f' candidato_x:{candidato_1} \n candidato_y:{candidato_2} \n candidato_z:{candidato_3} \n branco:{branco}')
+    print(f' candidato_x:{candidato_x} \n candidato_y:{candidato_y} \n candidato_z:{candidato_z} \n branco:{branco}')
 
     inicio = str (input('Deseja encerrar a votação? (S/N)'))
 
-os.system('cls')
+    if (candidato_x >= candidato_y and candidato_x >= candidato_z):
+        print('O candidato_x venceu')
+    elif (candidato_y >= candidato_x and candidato_y >= candidato_z):
+        print('O candidato_y venceu')
+    elif (candidato_z >= candidato_y and candidato_z >= candidato_x):
+        print('O candidato_z venceu')
