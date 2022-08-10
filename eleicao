@@ -31,8 +31,8 @@ while inicio != 'S':
     inicio = str (input('Deseja encerrar a votação? (S/N)'))
 
     if (candidato_x >= candidato_y and candidato_x >= candidato_z):
-        print('O candidato_x venceu')
+        print('O candidato_x venceu com', (candidato_x), "votos")
     elif (candidato_y >= candidato_x and candidato_y >= candidato_z):
-        print('O candidato_y venceu')
+        print('O candidato_y venceu com', (candidato_y), "votos")
     elif (candidato_z >= candidato_y and candidato_z >= candidato_x):
-        print('O candidato_z venceu')
+        print('O candidato_z venceu com', (candidato_z), "votos")
